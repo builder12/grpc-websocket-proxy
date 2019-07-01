@@ -25,7 +25,7 @@ func (s *Server) Stream(_ *echoserver.Empty, stream echoserver.EchoService_Strea
 	return nil
 }
 
-func (s *Server) Echo(srv echoserver.EchoService_EchoServer) error {
+func (s *Server) Echo( srv echoserver.EchoService_EchoServer) error {
 	for {
 		req, err := srv.Recv()
 		if err != nil {
